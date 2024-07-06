@@ -1,0 +1,29 @@
+{
+  "name": "qa.wikipedia-test-e2e.webdriverio",
+  "version": "1.0.0",
+  "description": "Projeto de automação de testes mobile iOS e Android",
+  "main": "index.js",
+  "keywords": [
+    "webdriverio",
+    "ios",
+    "android",
+    "mobile",
+    "testing",
+    "e2e"
+  ],
+  "repository": "https://github.com/qajonatasmartins/qa.wikipedia-test-e2e.webdriverio.git",
+  "author": "Jonatas Faria <jonatas.martins@zig.fun>",
+  "license": "MIT",
+  "devDependencies": {
+    "@wdio/appium-service": "^8.39.1",
+    "@wdio/local-runner": "^8.39.1",
+    "@wdio/mocha-framework": "^8.39.0",
+    "@wdio/spec-reporter": "^8.39.0",
+    "appium-uiautomator2-driver": "^3.7.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  },
+  "scripts": {
+    "wdio": "wdio run ./wdio.conf.ts"
+  }
+}
