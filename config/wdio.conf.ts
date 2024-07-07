@@ -4,10 +4,6 @@ dotenv.config()
 
 // @ts-ignore
 export const config: Options.Testrunner = {
-    // ====================
-    // Runner Configuration
-    // ====================
-    runner: 'local',
     autoCompileOpts: {
         autoCompile: true,
         tsNodeOpts: {
@@ -15,9 +11,8 @@ export const config: Options.Testrunner = {
             transpileOnly: true
         }
     },
-    port: 4723,
     specs: [
-        '../../tests/e2e/**/**/**/**/*.test.ts'
+        '../../tests/**/**/**/**/**/incorrectLogin.test.ts'
     ],
     suites: {
         smoketest: [
@@ -30,8 +25,10 @@ export const config: Options.Testrunner = {
     // ===================
     // Test Configurations
     // ===================
+    // Level of logging verbosity: trace | debug | info | warn | error | silent
+    logLevel: 'info',
     bail: 0,
-    baseUrl: '',
+    baseUrl: process.env.BASE_URL,
     waitforTimeout: 30000,
     connectionRetryTimeout: 120000,
     connectionRetryCount: 3,

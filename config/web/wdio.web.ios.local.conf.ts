@@ -1,7 +1,8 @@
 import type { Options } from '@wdio/types'
-import { config as sharedConfig } from '../wdio.conf'
+import { config as sharedConfig } from '../wdio.conf.ts'
 import path from 'path'
 
+// @ts-ignore
 export const config: Options.Testrunner = {
     ...sharedConfig,
     ...{
@@ -13,14 +14,17 @@ export const config: Options.Testrunner = {
         // ============
         // Capabilities
         // ============
-        maxInstances: 10,
+        maxInstances: 1,
         capabilities: [{
             platformName: 'iOS',
-            browserName: 'Chrome',
+            browserName: 'safari technology preview',
             'appium:deviceName': 'iPhone 12',
-            'appium:platformVersion': '12.0',
-            'appium:automationName': 'XCUITest'
+            'appium:platformVersion': '17.2',
+            'appium:newCommandTimeout': 3600,
+            'appium:automationName': 'XCUITest',
+            "appium:unicodeKeyboard": true
         }],
+        services: ['appium'],
         reporters: [
             'spec',
             [
@@ -32,10 +36,9 @@ export const config: Options.Testrunner = {
                 },
             ],
         ],
-        // ===================
-        // Test Configurations
-        // ===================
-        logLevel: 'info',
-        baseUrl: process.env.BASE_URL
+        afterTest: async function (test, context, { error, result, duration, passed, retries }) {
+            // @ts-ignore
+            await driver.saveScreenshot(path.resolve(`./reports/web/develop/${test.title}-retries${retries.attempts}.png`))
+        }
     }
 }
