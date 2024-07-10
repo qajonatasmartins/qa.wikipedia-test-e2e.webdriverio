@@ -74,6 +74,20 @@
 
 ## Appium
 
+1. Abra o terminal e execute o comando ``npm install -g appium`` (Versão 2 instalada).
+  - Em caso de erro na instalação do appium com o terminal powershell, siga o tutorial da [microsoft](https://learn.microsoft.com/pt-br/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.4) para correção.
+  ![alt text](./img/appium-01.png)
+  *Imagem ilustrativa retirada de um dos documentos que estão na referência.*
+2. Execute o próximo comando ``npm install -g appium-installer``. Esse comando vai mostrar uma linha de execução para verificação e instalação dos drivers (Não vai ser agora).
+3. Execute agora o comando ``npm install -g appium-doctor``
+4. Agora, execute o comando ``appium-doctor``, esse comando vai analisar o seu computador para verificar se todas as instalações estão corretas. Não se preocupe, existe itens opcionais e o obrigatórios, precisamo somente dos obrigatórios.
+5. Execute agora o comando ``appium-installer``, esse comando vai abrir algumas opções para verificação das instalações.
+   ![alt text](./img/appium-02.png)
+  - Selecione a opção 'Install Appium Drivers'
+  - Selecione a opção 'uiautomator2' e de enter
+  ![alt text](./img/appium-03.png)
+  - Selecione a opção 'latest' e de enter para instalação
+6. 
 
 
 ## Referências
