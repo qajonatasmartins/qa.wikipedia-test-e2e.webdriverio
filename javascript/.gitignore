@@ -1,0 +1,5 @@
+node_modules
+app/**
+.DS_Store
+reports/**/**/**.png
+reports/**/**/**.json

@@ -62,10 +62,10 @@ install_npm_package "appium"
 install_npm_package "appium-installer"
 
 # Instala o appium-installer se não estiver instalado
-install_appium_package "appium driver install xcuitest"
+install_appium_package "xcuitest"
 
 # Instala o appium-installer se não estiver instalado
-install_appium_package "appium driver install uiautomator2"
+install_appium_package "uiautomator2"
 
 # Instala o appium-doctor se não estiver instalado
 install_npm_package "appium-doctor"
