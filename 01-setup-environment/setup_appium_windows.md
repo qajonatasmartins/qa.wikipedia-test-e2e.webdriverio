@@ -38,5 +38,46 @@
 
 ## Android Studio
 
+1. Baixe o [Android Studio](https://developer.android.com/studio?hl=pt-br)
+2. Execute o instalador em sua máquina, e lembre de marcar a opção de **'Android Virtual Device'** deve estar marcada.
+![alt text](./img/android-studio-01.png)
+3. Após instalar, abra o Android Studio e marque a opção **“Do not import settings”**
+4. Clique em **[Don't send]**
+5. Clique em **[Next]**
+6. Clique em **[Next]**
+7. É exibido a tela de verificação para instalação de algumas depêndencias.
+![alt text](./img/android-studio-02.png)
+8. Clique em **[Next]**
+9. Marque a opção **“Accept”** e depois clique em **“Finish”**
+10. Após instalação, é exibida a tela inicial do Android Studio
+![alt text](./img/android-studio-03.png)
+11. Clique em **[More Actions] >> [Sdk Manager]**, está tela exibe o diretório do sdk do android no campo 'Android SDK Locations'. Confirme se o campo está preenchido (*COPIE O VALOR PARA MAIS TARDE*), caso sim, clique em [OK]
+12. Clique novamente em **[More Actions] >> [Virtual Device Manager] >> clique no ícone [+] e para configuração padrão clique em [Next]** e configure o device.
+13. Pronto, device configurado. 
+14. Agora, clique no ícone de [play] do device criado para inicia-lo.
+15. Variáveis de ambiente
+  - Agora vamos configurar as variáveis de ambiente, para isso abra o menu iniciar e pesquise por "Editar as variáveis de ambiente do sistema"
+  - Clique na aba "Avançado" >> [Variáveis de Ambiente...]
+  - Nas 'Variáveis de Sistema' e clique em [Novo]
+  - No campo 'Nome da variável' informe o valor "ANDROID_HOME"
+  - No campo 'Valor da variável' informe o valor do **'PASSO 11'**
+  - Clique em [OK]
+  - Ainda nas variáveis de sistema, de um DUPLO CLICK sobre a variável do 'Path' >> clique em [Novo]
+  - Adicione as seguintes variáveis
+    - %ANDROID_HOME%\tools\bin
+    - %ANDROID_HOME%\emulator
+    - %ANDROID_HOME%\platform-tools
+    ![alt text](./img/android-studio-04.png)
+  - Clique em [OK]
+
+*UFA PRONTO ATÉ AQUI :)*
 
 ## Appium
+
+
+
+## Referências
+
+- [Configuração ambiente WINDOWS para testes mobile ANDROID utilizando APPIUM — PARTE-1](https://medium.com/@adrianoaluizi/configura%C3%A7%C3%A3o-ambiente-windows-para-testes-mobile-android-utilizando-appium-parte-1-a126c409c6d0)
+- [Configuração ambiente WINDOWS para testes mobile ANDROID utilizando APPIUM — PARTE-2](https://medium.com/@adrianoaluizi/configura%C3%A7%C3%A3o-ambiente-windows-para-testes-mobile-android-utilizando-appium-parte-2-3c966ec814b2)
+- [Configurando Android Studio no Windows para testes manuais de APP](https://pt.linkedin.com/pulse/configurando-android-studio-windows-para-testes-de-martins-faria)
