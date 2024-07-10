@@ -31,6 +31,8 @@
     "typescript": "^5.5.3"
   },
   "scripts": {
+    "mac-setup-appium": "bash setup_appium.sh",
+    "windows-setup-appium": "setup_appium.bat",
     "webtest-android": "cross-env wdio run ./config/web/wdio.web.android.local.conf.ts",
     "webtest-ios": "cross-env wdio run ./config/web/wdio.web.ios.local.conf.ts"
   },
