@@ -79,3 +79,6 @@ Construção do curso de mobile automation testing com webdriverio.
 19. **Debug no WebdriverIO**
 20. **Ferramentas auxiliares do WebdriverIO**
     - REPL
+21. API
+    - Integrando os testes com a API do JIRA
+    - Integrando os testes com a API do QASE
