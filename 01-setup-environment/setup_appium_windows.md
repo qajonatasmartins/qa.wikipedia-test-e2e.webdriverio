@@ -80,14 +80,24 @@
   *Imagem ilustrativa retirada de um dos documentos que estão na referência.*
 2. Execute o próximo comando ``npm install -g appium-installer``. Esse comando vai mostrar uma linha de execução para verificação e instalação dos drivers (Não vai ser agora).
 3. Execute agora o comando ``npm install -g appium-doctor``
-4. Agora, execute o comando ``appium-doctor``, esse comando vai analisar o seu computador para verificar se todas as instalações estão corretas. Não se preocupe, existe itens opcionais e o obrigatórios, precisamo somente dos obrigatórios.
+4. Agora, execute o comando ``appium-doctor``, esse comando vai analisar o seu computador para verificar se todas as instalações estão corretas. Não se preocupe, existe itens opcionais e o obrigatórios, precisamos somente dos obrigatórios.
 5. Execute agora o comando ``appium-installer``, esse comando vai abrir algumas opções para verificação das instalações.
    ![alt text](./img/appium-02.png)
   - Selecione a opção 'Install Appium Drivers'
   - Selecione a opção 'uiautomator2' e de enter
   ![alt text](./img/appium-03.png)
   - Selecione a opção 'latest' e de enter para instalação
-6. 
+
+## Appium Inspector
+
+1. Baixe o [Appium Inspector](https://github.com/appium/appium-inspector/releases). **IMPORTANTE**: Aqui você deve baixar a versão correspondente ao seu sistema operacional.
+![alt text](./img/appium-inspector-01.png)
+2. Após instalação, abra o Appium Inspector
+3. Inicie o emulador do dispositivo Android que foi criado anteriormente.
+4. Preencha as informações conforme a imagem abaixo, clique em [Save as..] >> Informe um nome e clique em [Save]
+![alt text](./img/appium-inspector-02.png)
+5. Agora com emulador iniciado, clique no botão [Start Session] do appium inspector.
+6. Pronto, o device vai ser conectado e estará pronto para ser utilizado para mapear os elementos do dispositivo.
 
 
 ## Referências
