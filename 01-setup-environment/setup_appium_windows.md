@@ -99,7 +99,6 @@
 5. Agora com emulador iniciado, clique no botão [Start Session] do appium inspector.
 6. Pronto, o device vai ser conectado e estará pronto para ser utilizado para mapear os elementos do dispositivo.
 
-
 ## Referências
 
 - [Configuração ambiente WINDOWS para testes mobile ANDROID utilizando APPIUM — PARTE-1](https://medium.com/@adrianoaluizi/configura%C3%A7%C3%A3o-ambiente-windows-para-testes-mobile-android-utilizando-appium-parte-1-a126c409c6d0)
