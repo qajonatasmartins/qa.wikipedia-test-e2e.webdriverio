@@ -34,16 +34,21 @@ install_npm_package() {
 # Uso: install_appium_package driver_appium
 install_appium_package() {
     package_name=$1
-    echo "Verificando instalação do pacote npm $package_name..."
-    if ! command -v $package_name &> /dev/null; then
-        echo "$package_name não encontrado. Instalando..."
-        appium driver install $package_name
-        if [[ $? -ne 0 ]]; then
-            echo "Falha ao instalar $package_name. Verifique e tente novamente."
-            exit 1
-        fi
-    else
+    echo "Verificando instalação do driver do appium $package_name..."
+
+    # Verifica se o driver já está instalado
+    installed_drivers=$(appium driver list --installed)
+    if echo "$installed_drivers" | grep -q "$package_name"; then
         echo "$package_name já está instalado."
+    else
+        echo "$package_name não encontrado. Instalando..."
+        # Tenta instalar o driver, ignorando erros específicos
+        if ! appium driver install $package_name 2>&1 | grep -q "A driver named \"$package_name\" is already installed"; then
+            if [[ $? -ne 0 ]]; then
+                echo "Falha ao instalar $package_name. Verifique e tente novamente."
+                exit 1
+            fi
+        fi
     fi
 }
 

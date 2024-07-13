@@ -142,12 +142,14 @@ npm run wdio
 **Possivéis erros:**
 
 1. PlataformVersion incorreta para a versão do emulador ou device conectado.
-``` text
+
+```text {"id":"01J2PBEC1GK24XXMC5X8C00BP3"}
 ERROR webdriver: Request failed with status 500 due to unknown error: An unknown server-side error occurred while processing the command. Original error: Unable to find an active device or emulator with OS 12.0. The following are available: emulator-5554 (10)
 ```
+
 - **Solucão**: Abra o arquivo do wdio.conf.js e altere o plataformVersion para a versão correta do android do seu dispositivo/emulador conectado.
 
-``` javascript
+```javascript {"id":"01J2PBEC1GK24XXMC5XBFGESQK"}
     capabilities: [{
         // capabilities for local Appium web tests on an Android Emulator
         platformName: 'Android',
@@ -157,13 +159,14 @@ ERROR webdriver: Request failed with status 500 due to unknown error: An unknown
         'appium:automationName': 'UiAutomator2'
     }],
 ```
+
 2. Download do google chrome para execução do teste web no device
 
-```text
+```text {"id":"01J2PBEC1GK24XXMC5XDPEJ0F1"}
 ERROR @wdio/runner: Error: Failed to create session.
 [0-0] An unknown server-side error occurred while processing the command. Original error: No Chromedriver found that can automate Chrome '91.0.4472'. You could also try to enable automated chromedrivers download as a possible workaround.
 ```
 
-- **Solucão**: 
+- **Solução**:
 
 

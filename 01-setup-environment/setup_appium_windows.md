@@ -78,6 +78,7 @@
    - %ANDROID_HOME%\tools\bin
    - %ANDROID_HOME%\emulator
    - %ANDROID_HOME%\platform-tools
+   - %ANDROID_SDK_ROOT%\tools
    
       ![alt text](./img/android-studio-04.png)
 
