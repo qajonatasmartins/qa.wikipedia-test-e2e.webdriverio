@@ -35,6 +35,7 @@ export const config: Options.Testrunner = {
                 },
             ],
         ],
+        // @ts-ignore
         afterTest: async function (test, context, { error, result, duration, passed, retries }) {
             // @ts-ignore
             await driver.saveScreenshot(path.resolve(`./reports/web/develop/${test.title}-retries${retries.attempts}.png`))

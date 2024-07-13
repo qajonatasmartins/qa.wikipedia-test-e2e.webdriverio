@@ -1,3 +1,6 @@
+import path from 'path'
+
+const os = process.platform === 'win32' ? 'win32' : 'mac'
 export const config = {
     //
     // ====================
@@ -56,8 +59,9 @@ export const config = {
         platformName: 'Android',
         browserName: 'Chrome',
         'appium:deviceName': 'Android GoogleAPI Emulator',
-        'appium:platformVersion': '13.0',
-        'appium:automationName': 'UiAutomator2'
+        'appium:platformVersion': '8.0',
+        'appium:automationName': 'UiAutomator2',
+        "appium:unicodeKeyboard": true
     }],
 
     //
@@ -108,6 +112,7 @@ export const config = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     services: ['appium'],
+    // services: ['appium'],
 
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber

@@ -147,7 +147,7 @@ npm run wdio
 ERROR webdriver: Request failed with status 500 due to unknown error: An unknown server-side error occurred while processing the command. Original error: Unable to find an active device or emulator with OS 12.0. The following are available: emulator-5554 (10)
 ```
 
-- **Solucão**: Abra o arquivo do wdio.conf.js e altere o plataformVersion para a versão correta do android do seu dispositivo/emulador conectado.
+- **Solução**: Abra o arquivo do wdio.conf.js e altere o plataformVersion para a versão correta do android do seu dispositivo/emulador conectado.
 
 ```javascript {"id":"01J2PBEC1GK24XXMC5XBFGESQK"}
     capabilities: [{
@@ -168,5 +168,18 @@ ERROR @wdio/runner: Error: Failed to create session.
 ```
 
 - **Solução**:
+
+
+3. Ao executar o teste no emulador é exibido o erro abaixo porque o navegador do chrome não está instalado
+
+```text 
+An unknown server-side error occurred while processing the command. Original error: Either provide 'app' option to install 'com.android.chrome' or consider setting 'noReset' to 'true' if 'com.android.chrome' is supposed to be preinstalled.
+```
+
+- **Solução**: Uma opção é instalar o APK do google chrome e a outra é configurar um emulador com google play 
+![alt text](./img/google-play.png)
+
+
+
 
 

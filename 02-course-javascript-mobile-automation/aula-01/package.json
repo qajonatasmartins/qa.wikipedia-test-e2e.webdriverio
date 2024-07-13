@@ -12,6 +12,11 @@
     "appium-uiautomator2-driver": "^3.7.2"
   },
   "scripts": {
-    "wdio": "wdio run ./wdio.conf.js"
+    "real-device": "wdio run ./wdio.device.conf.js",
+    "emulator": "wdio run ./wdio.emulator.conf.js"
+  },
+  "dependencies": {
+    "appium": "^2.11.2",
+    "appium-chromedriver": "^5.6.63"
   }
 }

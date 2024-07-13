@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "appium": "^2.11.1",
+    "appium-chromedriver": "^5.6.63",
     "webdriverio": "^8.39.1"
   }
 }

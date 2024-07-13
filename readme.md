@@ -15,30 +15,30 @@ Construção do curso de mobile automation testing com webdriverio.
     - Mac
     - Autocomplete
 2. **Android**
-    - Instalação & Configuração (Android)
-      - Encontrando elementos
-        - Accessibility id
-        - Class Name
-        - XPath
-        - UiSelector
-        - UiScrollable
-      - Outros recursos
-        - Dialog/Alert
-        - Vertical Scroll
-        - Horizontal Scroll
-        - Permissões ao dispositivo
+    - [Instalação & Configuração (Android) do projeto com o WebdriverIO](./02-course-javascript-mobile-automation/aula-01/)
+    - Encontrando elementos
+      - Accessibility id
+      - Class Name
+      - XPath
+      - UiSelector
+      - UiScrollable
+    - Outros recursos
+      - Dialog/Alert
+      - Vertical Scroll
+      - Horizontal Scroll
+      - Permissões ao dispositivo
 3. **iOS**
-    - Instalação & Configuração(iOS)
-      - Encontrando elementos
-        - Accessibility id
-        - Class Name
-        - XPath
-        - Class Chain
-        - Predicate String
-      - Outros recursos
-        - Dialog/Alert
-        - Vertical Scroll
-        - Picker view
+    - Instalação & Configuração(iOS) do projeto com o WebdriverIO
+    - Encontrando elementos
+      - Accessibility id
+      - Class Name
+      - XPath
+      - Class Chain
+      - Predicate String
+    - Outros recursos
+      - Dialog/Alert
+      - Vertical Scroll
+      - Picker view
 4. **Page Object Model**
     - Estrutura do projeto (tests, screenObjects, data, utils)
 5. **WebView**
