@@ -1,6 +1,3 @@
-import path from 'path'
-
-const os = process.platform === 'win32' ? 'win32' : 'mac'
 export const config = {
     //
     // ====================
@@ -26,7 +23,7 @@ export const config = {
     // will be called from there.
     //
     specs: [
-        './test/specs/**/*.js'
+        './test/specs/**/login.test.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -58,10 +55,10 @@ export const config = {
         // capabilities for local Appium web tests on an Android Emulator
         platformName: 'Android',
         browserName: 'Chrome',
-        'appium:fullReset': false,
         'appium:deviceName': 'Android GoogleAPI Emulator',
-        'appium:platformVersion': '12.0',
-        'appium:automationName': 'UiAutomator2'
+        'appium:platformVersion': '8.0',
+        'appium:automationName': 'UiAutomator2',
+        "appium:unicodeKeyboard": true
     }],
 
     //
@@ -112,6 +109,7 @@ export const config = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     services: ['appium'],
+    // services: ['appium'],
 
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber

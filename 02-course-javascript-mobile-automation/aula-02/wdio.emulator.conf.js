@@ -61,8 +61,7 @@ export const config = {
         'appium:fullReset': false,
         'appium:deviceName': 'Android GoogleAPI Emulator',
         'appium:platformVersion': '12.0',
-        'appium:automationName': 'UiAutomator2',
-        'appium:executable': path.resolve(`./node_modules/appium-chromedriver/chromedriver/${os}/chromedriver-${os}-arm64_v126.0.6478`)
+        'appium:automationName': 'UiAutomator2'
     }],
 
     //
@@ -112,17 +111,7 @@ export const config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: [
-        ['appium', {
-            command: 'appium',
-            args: {
-                allowInsecure: [
-                    'chromedriver_autodownload'
-                ],
-            }
-        }]
-    ],
-    // services: ['appium'],
+    services: ['appium'],
 
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber

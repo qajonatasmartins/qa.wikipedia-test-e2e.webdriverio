@@ -10,12 +10,34 @@ Construção do curso de mobile automation testing com webdriverio.
 
 ## Conteúdo do curso
 
+**IMPORTANTE: APPIUM_SKIP_CHROMEDRIVER_INSTALL=1 npm install**
+
+0. **Conceitos iniciais**
+    - Padrão Triple A testing
+    - End-2-End
+      - O que validar em um teste e2e?
+      - O que não validar em um teste e2e?
+    - Técnicas de teste
+      - Analise de valor limite
+      - Partição de equivalência
+      - ...
+    - Tipos de Dispositivos (SmartPhone, SmartPOS, Totem, SmartWatch, TVs e etc.)
+    - Emulador vs Simulador
+    - Device Farm, Device Cloud e Device Real
+    - 
 1. **Configuração inicial**
     - [Windows](./01-setup-environment/setup_appium_windows.md)
     - [Mac](./01-setup-environment/setup_appium_mac.md)
 2. **Web**
     - [Instalação & Configuração (Android Web)](./02-course-javascript-mobile-automation/aula-01/)
     - [Configurando o Autocomplete](./02-course-javascript-mobile-automation/aula-02/)
+    - Android
+      - [Mapeamento de elementos](./02-course-javascript-mobile-automation/aula-03/)
+        - [ID](./02-course-javascript-mobile-automation/aula-03/test/specs/login.test.js)
+        - CSS Selector
+        - XPATH
+    - iOS
+      - [Mapeamento de elementos]()
 3. **Android**
     - Instalação & Configuração (Android) do projeto com o WebdriverIO
     - Encontrando elementos

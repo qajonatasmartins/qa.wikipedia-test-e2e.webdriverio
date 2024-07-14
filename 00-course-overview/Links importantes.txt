@@ -1,0 +1,7 @@
+Configurando no bitrise: https://bitrise.io/blog/post/getting-started-with-appium-2-0-your-beginners-guide
+Mobile Testing with Appium and Java: From Setup to Execution: https://testautomationu.applitools.com/appium-java-tutorial-1/
+Chrome Driver Android: https://github.com/appium/appium-chromedriver/blob/master/README.md
+Args: https://github.com/appium/appium/blob/master/packages/appium/docs/en/cli/args.md
+Problema do chromedriver: https://www.youtube.com/watch?v=DcIXC6NyZ5Q
+Chrome: https://www.youtube.com/watch?v=c2Ns75xpEGA
+https://www.youtube.com/watch?v=GIfk06-qfDQ&list=PLPO0LFyCaSo3JMKDt3KAQO3wTdDrsXTro

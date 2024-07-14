@@ -173,7 +173,9 @@ ERROR @wdio/runner: Error: Failed to create session.
 An unknown server-side error occurred while processing the command. Original error: Either provide 'app' option to install 'com.android.chrome' or consider setting 'noReset' to 'true' if 'com.android.chrome' is supposed to be preinstalled.
 ```
 
-- **Solução**: Uma opção é instalar o APK do google chrome e a outra é configurar um emulador com google play. **Obs.:** O android 14 e 13 estão com problema, por isso ao criar um emulador, prefira um na versão 12 Google Play.
+- **Solução**: Uma opção é instalar o APK do google chrome ou conectar no google play e atualizar o app e a outra é configurar um emulador com google play. 
+**Obs.:** O android 14 e 13 estão com problema, por isso ao criar um emulador, prefira um na versão 12 Google Play.
+De a preferência para atualizar o app no emulador.
    ![alt text](./img/google-play.png)
 
 ## **Passo 5:** Duplique o arquivo wdio.conf.js, criando mais dois arquivos 'wdio.device.conf.js' e 'wdio.emulator.conf.js'.
@@ -202,8 +204,7 @@ An unknown server-side error occurred while processing the command. Original err
         'appium:fullReset': false, /* Se o aplicativo estiver instaldo, ele não apaga para reinstalar no device. */
         'appium:deviceName': 'Android GoogleAPI Emulator',
         'appium:platformVersion': '12.0', /* Versão do device utilizado */
-        'appium:automationName': 'UiAutomator2',
-        'appium:executable': path.resolve(`./node_modules/appium-chromedriver/chromedriver/${os}/chromedriver-${os}-arm64_v126.0.6478`) /* Caminho para pegar o arquivo do chrome para instalar no device caso necessário. Obs.: Necessário a dependência do 'appium-chromedriver'. */
+        'appium:automationName': 'UiAutomator2'
     }],
 ```
 

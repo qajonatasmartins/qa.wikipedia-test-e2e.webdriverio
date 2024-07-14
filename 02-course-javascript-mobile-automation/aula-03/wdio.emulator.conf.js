@@ -26,7 +26,7 @@ export const config = {
     // will be called from there.
     //
     specs: [
-        './test/specs/**/*.js'
+        './test/specs/**/login.test.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -111,7 +111,17 @@ export const config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['appium'],
+    services: [
+        ['appium', {
+            command: 'appium',
+            args: {
+                allowInsecure: [
+                    'chromedriver_autodownload'
+                ],
+            }
+        }]
+    ],
+    // services: ['appium'],
 
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
