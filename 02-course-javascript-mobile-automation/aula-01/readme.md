@@ -1,8 +1,6 @@
 # Aula 01
 
-## **Passo 1:**
-
-Execute o comando abaixo para iniciar o projeto
+## **Passo 1:** Execute o comando abaixo para iniciar o projeto
 
 ```sh {"id":"01J2FPBY8DRM7N529RFSQY4B0V"}
 npm init wdio@latest .
@@ -169,22 +167,20 @@ ERROR @wdio/runner: Error: Failed to create session.
 
 - **Solução**:
 
-
 3. Ao executar o teste no emulador é exibido o erro abaixo porque o navegador do chrome não está instalado
 
-```text 
+```text {"id":"01J2S8J1YSDTTZ6TZWT9HKQG5C"}
 An unknown server-side error occurred while processing the command. Original error: Either provide 'app' option to install 'com.android.chrome' or consider setting 'noReset' to 'true' if 'com.android.chrome' is supposed to be preinstalled.
 ```
 
 - **Solução**: Uma opção é instalar o APK do google chrome e a outra é configurar um emulador com google play. **Obs.:** O android 14 e 13 estão com problema, por isso ao criar um emulador, prefira um na versão 12 Google Play.
-![alt text](./img/google-play.png)
-
+   ![alt text](./img/google-play.png)
 
 ## **Passo 5:** Duplique o arquivo wdio.conf.js, criando mais dois arquivos 'wdio.device.conf.js' e 'wdio.emulator.conf.js'.
 
 ### wdio.device.conf.js
 
-``` json
+```json {"id":"01J2S8J1YSDTTZ6TZWTA74DHAH"}
     capabilities: [{
         // capabilities for local Appium web tests on an Android Emulator
         platformName: 'Android', /* Plataforma */
@@ -198,7 +194,7 @@ An unknown server-side error occurred while processing the command. Original err
 
 ### wdio.emulator.conf.js
 
-``` json
+```json {"id":"01J2S8J1YSDTTZ6TZWTDJJ8ERD"}
     capabilities: [{
         // capabilities for local Appium web tests on an Android Emulator
         platformName: 'Android', /* Plataforma */
@@ -213,7 +209,7 @@ An unknown server-side error occurred while processing the command. Original err
 
 ## **Passo 6:** No arquivo package.json crie dois scripts para executar o teste no device e no emulador.
 
-```json
+```json {"id":"01J2S8J1YSDTTZ6TZWTFKJYXNY"}
 {
   "name": "aula-01",
   "type": "module",

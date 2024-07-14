@@ -13,7 +13,6 @@ Construção do curso de mobile automation testing com webdriverio.
 1. **Configuração inicial**
     - [Windows](./01-setup-environment/setup_appium_windows.md)
     - [Mac](./01-setup-environment/setup_appium_mac.md)
-    - Autocomplete
 2. **Web**
     - [Instalação & Configuração (Android Web)](./02-course-javascript-mobile-automation/aula-01/)
     - [Configurando o Autocomplete](./02-course-javascript-mobile-automation/aula-02/)
