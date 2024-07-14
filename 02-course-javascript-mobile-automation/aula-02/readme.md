@@ -1,6 +1,6 @@
 # Aula 01
 
-## **Passo 1:**
+**Passo 1:**
 
 Execute o comando abaixo para iniciar o projeto
 
@@ -127,19 +127,19 @@ $ npm run wdio
 ```
 ````````
 
-## **Passo 2:** Informe 'Y' para verificar as instalações do appium na sua maquina ou 'n' para não verificar.
+**Passo 2:** Informe 'Y' para verificar as instalações do appium na sua maquina ou 'n' para não verificar.
 
 - Aqui informei 'n'
 
-## **Passo 3:** Abra o emulador ou conecte o device no computador
+**Passo 3:** Abra o emulador ou conecte o device no computador
 
-## **Passo 4:** Execute o comando abaixo
+**Passo 4:** Execute o comando abaixo
 
 ```sh {"id":"01J2FPBY8DRM7N529RFWS01GCZ"}
 npm run wdio
 ```
 
-### **Possivéis erros:**
+**Possivéis erros:**
 
 1. PlataformVersion incorreta para a versão do emulador ou device conectado.
 
@@ -176,67 +176,10 @@ ERROR @wdio/runner: Error: Failed to create session.
 An unknown server-side error occurred while processing the command. Original error: Either provide 'app' option to install 'com.android.chrome' or consider setting 'noReset' to 'true' if 'com.android.chrome' is supposed to be preinstalled.
 ```
 
-- **Solução**: Uma opção é instalar o APK do google chrome e a outra é configurar um emulador com google play. **Obs.:** O android 14 e 13 estão com problema, por isso ao criar um emulador, prefira um na versão 12 Google Play.
+- **Solução**: Uma opção é instalar o APK do google chrome e a outra é configurar um emulador com google play 
 ![alt text](./img/google-play.png)
 
 
-## **Passo 5:** Duplique o arquivo wdio.conf.js, criando mais dois arquivos 'wdio.device.conf.js' e 'wdio.emulator.conf.js'.
 
-### wdio.device.conf.js
-
-``` json
-    capabilities: [{
-        // capabilities for local Appium web tests on an Android Emulator
-        platformName: 'Android', /* Plataforma */
-        browserName: 'Chrome', /* Navegador utilizado para teste */
-        'appium:deviceName': 'Android GoogleAPI Emulator',
-        'appium:platformVersion': '12.0', /* Versão do device utilizado */
-        'appium:automationName': 'UiAutomator2',
-        "appium:unicodeKeyboard": true /* Desativar o teclado do device */
-    }],
-```
-
-### wdio.emulator.conf.js
-
-``` json
-    capabilities: [{
-        // capabilities for local Appium web tests on an Android Emulator
-        platformName: 'Android', /* Plataforma */
-        browserName: 'Chrome', /* Navegador utilizado para teste */
-        'appium:fullReset': false, /* Se o aplicativo estiver instaldo, ele não apaga para reinstalar no device. */
-        'appium:deviceName': 'Android GoogleAPI Emulator',
-        'appium:platformVersion': '12.0', /* Versão do device utilizado */
-        'appium:automationName': 'UiAutomator2',
-        'appium:executable': path.resolve(`./node_modules/appium-chromedriver/chromedriver/${os}/chromedriver-${os}-arm64_v126.0.6478`) /* Caminho para pegar o arquivo do chrome para instalar no device caso necessário. Obs.: Necessário a dependência do 'appium-chromedriver'. */
-    }],
-```
-
-## **Passo 6:** No arquivo package.json crie dois scripts para executar o teste no device e no emulador.
-
-```json
-{
-  "name": "aula-01",
-  "type": "module",
-  "devDependencies": {
-    "@babel/core": "^7.24.7",
-    "@babel/preset-env": "^7.24.7",
-    "@babel/register": "^7.24.6",
-    "@wdio/appium-service": "^8.39.1",
-    "@wdio/local-runner": "^8.39.1",
-    "@wdio/mocha-framework": "^8.39.0",
-    "@wdio/spec-reporter": "^8.39.0",
-    "appium-uiautomator2-driver": "^3.7.2"
-  },
-  "scripts": {
-    "real-device": "wdio run ./wdio.device.conf.js",
-    "emulator": "wdio run ./wdio.emulator.conf.js"
-  },
-  "dependencies": {
-    "appium": "^2.11.2",
-    "appium-chromedriver": "^5.6.63"
-  }
-}
-
-```
 
 

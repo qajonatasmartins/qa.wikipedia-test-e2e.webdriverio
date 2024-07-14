@@ -1,0 +1,22 @@
+{
+  "name": "aula-01",
+  "type": "module",
+  "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "@babel/register": "^7.24.6",
+    "@wdio/appium-service": "^8.39.1",
+    "@wdio/local-runner": "^8.39.1",
+    "@wdio/mocha-framework": "^8.39.0",
+    "@wdio/spec-reporter": "^8.39.0",
+    "appium-uiautomator2-driver": "^3.7.2"
+  },
+  "scripts": {
+    "real-device": "wdio run ./wdio.device.conf.js",
+    "emulator": "wdio run ./wdio.emulator.conf.js"
+  },
+  "dependencies": {
+    "appium": "^2.11.2",
+    "appium-chromedriver": "^5.6.63"
+  }
+}
