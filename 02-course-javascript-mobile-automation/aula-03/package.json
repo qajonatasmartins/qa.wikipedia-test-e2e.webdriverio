@@ -1,5 +1,5 @@
 {
-  "name": "aula-01",
+  "name": "aula-03",
   "type": "module",
   "devDependencies": {
     "@babel/core": "^7.24.7",
@@ -13,7 +13,9 @@
   },
   "scripts": {
     "real-device": "wdio run ./wdio.device.conf.js",
-    "emulator": "wdio run ./wdio.emulator.conf.js"
+    "login-real-device": "wdio run ./wdio.device.conf.js --suite login",
+    "emulator": "wdio run ./wdio.emulator.conf.js",
+    "login-emulator": "wdio run ./wdio.emulator.conf.js --suite login"
   },
   "dependencies": {
     "appium": "^2.11.2",

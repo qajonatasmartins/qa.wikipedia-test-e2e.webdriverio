@@ -28,16 +28,24 @@ Construção do curso de mobile automation testing com webdriverio.
 1. **Configuração inicial**
     - [Windows](./01-setup-environment/setup_appium_windows.md)
     - [Mac](./01-setup-environment/setup_appium_mac.md)
+    - [Appium Inspector]()
 2. **Web**
     - [Instalação & Configuração (Android Web)](./02-course-javascript-mobile-automation/aula-01/)
     - [Configurando o Autocomplete](./02-course-javascript-mobile-automation/aula-02/)
     - Android
       - [Mapeamento de elementos](./02-course-javascript-mobile-automation/aula-03/)
-        - [ID](./02-course-javascript-mobile-automation/aula-03/test/specs/login.test.js)
-        - CSS Selector
-        - XPATH
+        - [ID](./02-course-javascript-mobile-automation/aula-03/test/specs/login/login-by-id.test.js)
+        - [CSS Selector](./02-course-javascript-mobile-automation/aula-03/test/specs/login/login-by-css-selector.test.js)
+        - [XPATH](./02-course-javascript-mobile-automation/aula-03/test/specs/login/login-by-xpath.test.js)
+      - Criando uma suite para executar os testes
+        - [wdio.device.conf.js](./02-course-javascript-mobile-automation/aula-03/wdio.device.conf.js)
+        - [wdio.emulator.conf.js](./02-course-javascript-mobile-automation/aula-03/wdio.emulator.conf.js)
     - iOS
-      - [Mapeamento de elementos]()
+      - [Mapeamento de elementos](./02-course-javascript-mobile-automation/aula-04/)
+        - [Abrindo o navegador em modo mobile]()
+        - [Accessibility ID]()
+        - [-ios predicate string]()
+        - [-ios class chain]()
 3. **Android**
     - Instalação & Configuração (Android) do projeto com o WebdriverIO
     - Encontrando elementos

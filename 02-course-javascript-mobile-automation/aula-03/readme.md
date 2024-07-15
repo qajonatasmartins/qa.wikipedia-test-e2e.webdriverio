@@ -43,6 +43,86 @@ Assert
     ],
 ```
 
-## **Passo 4:** Execute o comando 
+## **Passo 4:** Execute os testes com o comando
 
+``` bash
+npm run emulator
+```
+
+ou 
+
+``` bash
+npm run real-device
+```
+
+## **Passo 5:** Criando uma [suite de testes](https://webdriver.io/docs/organizingsuites#grouping-test-specs-in-suites)
+
+No arquivo wdio.device.conf.js e wdio.emulator.conf.js abaixo da seção da spec, crie uma seção de suites.
+
+``` json
+// wdio.conf.js
+export const config = {
+    // define all tests
+    specs: [
+        './test/specs/**/**/*.spec.js'
+    ],
+    // ...
+    // define specific suites
+    suites: {
+        login: [
+         './test/specs/login/**.js'
+        ],
+        otherFeature: [
+            // ...
+        ]
+    },
+    // ...
+}
+```
+
+## **Passo 6:** Adicione o maxInstances igual a 1 nos arquivos de configuração wdio.device.conf.js e wdio.emulator.conf.js para que execute um teste de cada vez no dispositivo.
+
+
+## **Passo 7:** No arquivo package.json, crie um script para executar os testes da suite.
+
+``` json
+{
+  "name": "aula-03",
+  "type": "module",
+  "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "@babel/register": "^7.24.6",
+    "@wdio/appium-service": "^8.39.1",
+    "@wdio/local-runner": "^8.39.1",
+    "@wdio/mocha-framework": "^8.39.0",
+    "@wdio/spec-reporter": "^8.39.0",
+    "appium-uiautomator2-driver": "^3.7.2"
+  },
+  "scripts": {
+    "real-device": "wdio run ./wdio.device.conf.js",
+    "login-real-device": "wdio run ./wdio.device.conf.js --suite login",
+    "emulator": "wdio run ./wdio.emulator.conf.js",
+    "login-emulator": "wdio run ./wdio.emulator.conf.js --suite login"
+  },
+  "dependencies": {
+    "appium": "^2.11.2",
+    "appium-chromedriver": "^5.6.63"
+  }
+}
+
+```
+
+
+## **Passo 8:** Execute os testes com o comando
+
+``` bash
+npm run login-real-device
+```
+
+ou 
+
+``` bash
+npm run login-emulator
+```
 

@@ -1,6 +1,3 @@
-import path from 'path'
-
-const os = process.platform === 'win32' ? 'win32' : 'mac'
 export const config = {
     //
     // ====================
@@ -26,11 +23,11 @@ export const config = {
     // will be called from there.
     //
     specs: [
-        './test/specs/**/**/**.js'
+        '../../test/specs/**/**/**.js'
     ],
     suites: {
         login: [
-            './test/specs/login/**.js'
+            '../../test/specs/login/ios/**.js'
         ],
         otherFeature: [
             // ...
@@ -63,13 +60,13 @@ export const config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        // capabilities for local Appium web tests on an Android Emulator
-        platformName: 'Android',
-        browserName: 'Chrome',
-        'appium:fullReset': false,
-        'appium:deviceName': 'Android GoogleAPI Emulator',
-        'appium:platformVersion': '12.0',
-        'appium:automationName': 'UiAutomator2'
+        platformName: 'iOS',
+        browserName: 'safari technology preview',
+        'appium:deviceName': 'iPhone 12',
+        'appium:platformVersion': '17.2',
+        'appium:newCommandTimeout': 3600,
+        'appium:automationName': 'XCUITest',
+        "appium:unicodeKeyboard": true
     }],
 
     //
@@ -119,16 +116,7 @@ export const config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: [
-        ['appium', {
-            command: 'appium',
-            args: {
-                allowInsecure: [
-                    'chromedriver_autodownload'
-                ],
-            }
-        }]
-    ],
+    services: ['appium'],
     // services: ['appium'],
 
     // Framework you want to run your specs with.
