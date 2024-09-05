@@ -17,9 +17,9 @@ describe('Wikipedia', () => {
 
         await btnMenu.click()
         await btnEnter.click()
-        await inpPassword.waitForExist()
-        await inpPassword.addValue('incorrect-pass')
+        await driver.execute('mobile: scroll', { direction: "down" })
         await inpUsername.addValue('incorrect-user')
+        await inpPassword.addValue('incorrect-pass')
         await btnEnterLogin.click()
         await btnNotnow.click()
 
